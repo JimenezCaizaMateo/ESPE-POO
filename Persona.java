@@ -1,26 +1,33 @@
 
-package persona;
+package taller1;
 
 /**
  *
  * @author jimen
  */
-public class Persona 
+public abstract class Persona 
 {
     String nombre;
     int edad;
+    private String cedula;
 
     public Persona(String nombre, int edad) 
     {
         this.nombre = nombre;
         this.edad = edad;
     }
-    public void correr()
+
+    public String getCedula() 
     {
-        System.out.println(this.nombre+" esta corriendo");
+        return cedula;
     }
-    public void saltar(int saltar)
+
+    public void setCedula(String cedula) 
     {
-        System.out.println(this.nombre+" esta slatando a "+saltar+"cm del suelo");
+        this.cedula = cedula;
     }
+    public abstract void Comer();
+
+    public abstract void Dormir();
+
 }
